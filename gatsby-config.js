@@ -2,7 +2,7 @@ const siteConfig = require('./site-config');
 
 module.exports = {
   siteMetadata: {
-    ...siteConfig,
+    ...siteConfig
   },
   plugins: [
     {
@@ -66,12 +66,6 @@ module.exports = {
           include: /images/,
         },
       },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    }
   ],
 }

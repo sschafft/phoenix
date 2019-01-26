@@ -1,12 +1,10 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import Head from '../components/head'
-import { rhythm } from '../utils/typography'
 
-class BlogIndex extends React.Component {
+class About extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -17,18 +15,13 @@ class BlogIndex extends React.Component {
           title="About"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <Bio />
-         <h3
-            style={{
-              marginBottom: rhythm(1 / 4),
-            }}
-          >About</h3>
+         <h3>About</h3>
       </Layout>
     )
   }
 }
 
-export default BlogIndex
+export default About
 
 export const pageQuery = graphql`
   query {

@@ -61,12 +61,6 @@ function Head({ description, lang, meta, keywords, title }) {
               )
               .concat(meta)}
           >
-            <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
-            <meta
-              content="width=device-width,initial-scale=1.0,user-scalable=yes"
-              name="viewport"
-            />
-            
             <link href="/manifest.json" rel="manifest" />
 
             <meta content="/icons/mstile-70x70.png" name="msapplication-square70x70" />
@@ -153,6 +147,16 @@ function Head({ description, lang, meta, keywords, title }) {
               sizes="16x16"
               type="image/png"
             />
+
+            {/* @TODO - Adjust this sadness */}
+            <link href="vendor/css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="vendor/css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="vendor/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+            <link href="vendor/css/interface-icons.css" rel="stylesheet" type="text/css" media="all"/>
+            <link href="vendor/css/owl.carousel.css" rel="stylesheet" type="text/css" media="all"/>
+            <link href="vendor/css/theme.css" rel="stylesheet" type="text/css" media="all"/>
+            <link href="vendor/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
+            <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700' rel='stylesheet' type='text/css' />
           </Helmet>
         )
       }}

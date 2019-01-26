@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Bio from './Bio'
+import Footer from './Footer'
 
-import { rhythm, scale } from '../utils/typography'
 
 class Layout extends React.Component {
   render() {
@@ -11,33 +12,11 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
+        <Bio />
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
+        <h3>
           <Link
             style={{
               boxShadow: `none`,
@@ -52,21 +31,10 @@ class Layout extends React.Component {
       )
     }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
+      <div className="main-container">
         {header}
         {children}
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     )
   }

@@ -4,9 +4,8 @@ import { Link, graphql } from 'gatsby'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import Head from '../components/head'
-import { rhythm, scale } from '../utils/typography'
 
-class ProjectTemplate extends React.Component {
+class ProjectPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -15,27 +14,14 @@ class ProjectTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Head title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
-        <h1>{post.frontmatter.client}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
+        <h1>PROJECT: {post.frontmatter.title}</h1>
+        <p>
           {post.frontmatter.date}
         </p>
         <h1>{this.props.slug}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr />
         <Bio />
-        <h1> ITS A PROJECT </h1>
 
         <ul
           style={{
@@ -66,10 +52,10 @@ class ProjectTemplate extends React.Component {
   }
 }
 
-export default ProjectTemplate
+export default ProjectPostTemplate
 
 export const pageQuery = graphql`
-  query ProjectsBySlug($slug: String!) {
+  query ProjectPostBySlug($slug: String!) {
     site {
       siteMetadata {
         title
@@ -83,7 +69,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        client
       }
     }
   }
