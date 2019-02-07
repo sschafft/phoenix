@@ -36,19 +36,21 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
       const type = post.node.fields.slug.split('/')[1]
+      const pageTypes = ['blog','projects']
 
       const componentType = path.resolve(`./src/templates/${type}.js`)
-
-      createPage({
-        path: post.node.fields.slug,
-        component: componentType,
-        context: {
-          slug: post.node.fields.slug,
-          type,
-          previous,
-          next,
-        },
-      })
+      if (pageTypes.includes(type)){
+        createPage({
+          path: post.node.fields.slug,
+          component: componentType,
+          context: {
+            slug: post.node.fields.slug,
+            type,
+            previous,
+            next,
+          },
+        })
+      }
     })
   })
 }

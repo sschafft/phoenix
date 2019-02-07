@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
+import { rhythm, scale } from '../utils/typography'
 
 function Bio() {
   return (
@@ -9,34 +10,30 @@ function Bio() {
       render={data => {
         const { author, social, byline } = data.site.siteMetadata
         return (
-          <section className="features features-4">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-7 col-md-7 col-sm-12">
-                            <h3>{author}</h3>
-                            <p className="lead">{byline}</p>
-                            <div className="feature">
-                              <Link style={{ boxShadow: `none` }} to="/about">
-                                <h5>Learn more about me →</h5>
-                              </Link>
-                            </div>
-                        </div>
-                        <div className="col-lg-5 col-md-5 col-sm-12">
-                          <Image
-                            fixed={data.avatar.childImageSharp.fixed}
-                            alt={author}
-                            style={{
-                              marginBottom: 0,
-                              borderRadius: `100%`,
-                            }}
-                            imgStyle={{
-                              borderRadius: `50%`,
-                            }}
-                          />
-                        </div>
-                    </div>
-                </div>
-            </section>
+          <section
+            style={{
+              display: `flex`,
+              marginBottom: rhythm(2.5),
+            }}
+          >
+          <Image
+            fixed={data.avatar.childImageSharp.fixed}
+            alt={author}
+            style={{
+              marginRight: rhythm(2),
+              marginBottom: 0,
+              minWidth: 150,
+              borderRadius: `100%`,
+            }}
+          />
+          <div>
+            <h1>{author}</h1>
+            <p>{byline}</p>
+            <Link style={{ boxShadow: `none` }} to="/about">
+              <h5>Learn more about me →</h5>
+            </Link>
+          </div>
+          </section>
         )
       }}
     />
@@ -47,7 +44,7 @@ const bioQuery = graphql`
   query BioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        fixed(width: 300, height: 300) {
+        fixed(width: 150, height: 150) {
           ...GatsbyImageSharpFixed
         }
       }

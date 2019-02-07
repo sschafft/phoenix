@@ -57,6 +57,13 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
@@ -67,5 +74,5 @@ module.exports = {
         },
       },
     }
-  ],
+  ]
 }

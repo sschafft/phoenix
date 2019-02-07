@@ -1,5 +1,6 @@
 import React from 'react'
 import PostListItems from './PostListItems'
+import { rhythm, scale } from '../utils/typography'
 
 function PostList() {
   return (

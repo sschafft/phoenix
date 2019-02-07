@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
+import { rhythm, scale } from '../utils/typography'
 
 function PostListItems() {
   return (
@@ -51,7 +52,7 @@ const PostQuery = graphql`
             title
             heroImage {
               childImageSharp {
-                fluid(maxWidth: 100, maxHeight: 100) {
+                fluid(maxWidth: 200, maxHeight: 200) {
                   ...GatsbyImageSharpFluid
                 }
               }

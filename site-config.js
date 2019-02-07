@@ -1,5 +1,5 @@
 module.exports = {
-  title: `Scott Schaffter Personal Site`,
+  title: `Scott Schaffter`,
   author: `Scott Schaffter`,
   email: `scott@schaffters.com`,
   byline: `I help people take ideas and turn them into things.`,

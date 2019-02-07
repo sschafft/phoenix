@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
-import Head from '../components/head'
+import Head from '../components/Head'
 
 class BlogPostTemplate extends React.Component {
   render() {

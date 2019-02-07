@@ -148,15 +148,6 @@ function Head({ description, lang, meta, keywords, title }) {
               type="image/png"
             />
 
-            {/* @TODO - Adjust this sadness */}
-            <link href="vendor/css/socicon.css" rel="stylesheet" type="text/css" media="all" />
-            <link href="vendor/css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
-            <link href="vendor/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
-            <link href="vendor/css/interface-icons.css" rel="stylesheet" type="text/css" media="all"/>
-            <link href="vendor/css/owl.carousel.css" rel="stylesheet" type="text/css" media="all"/>
-            <link href="vendor/css/theme.css" rel="stylesheet" type="text/css" media="all"/>
-            <link href="vendor/css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-            <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700' rel='stylesheet' type='text/css' />
           </Helmet>
         )
       }}

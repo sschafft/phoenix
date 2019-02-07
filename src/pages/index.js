@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
-import Head from '../components/head'
+import Head from '../components/Head'
 
 class BlogIndex extends React.Component {
   render() {
@@ -13,10 +13,9 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Head
-          title="Home"
+          title="Me"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <PostList />
       </Layout>
     )
   }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Bio from './Bio'
 import Footer from './Footer'
+import { rhythm, scale } from '../utils/typography'
 
 
 class Layout extends React.Component {
@@ -16,7 +17,11 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3>
+        <h5
+          style={{
+            marginTop: 0,
+          }}
+        >
           <Link
             style={{
               boxShadow: `none`,
@@ -25,13 +30,20 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            ← back
           </Link>
-        </h3>
+        </h5>
       )
     }
     return (
-      <div className="main-container">
+      <div
+        style={{
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          maxWidth: rhythm(26),
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        }}
+      >
         {header}
         {children}
         <Footer />
