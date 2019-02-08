@@ -9,8 +9,7 @@ const FooterLink = styled.a`
 const FooterLinks = styled.ul`
   font-size: ${rhythm(.6)};
   list-style-type: none;
-  margin-bottom: ${rhythm(1)};
-  margin-left: 0px;
+  margin: ${rhythm(1)} 0px ${rhythm(1)} 0px;
 
   li {
     display: inline;
@@ -26,7 +25,6 @@ const FooterLinks = styled.ul`
     border: none;
   }
 `
-
 const FooterCopyright = styled.div`
   display: inline-block;
   font-size: ${rhythm(.5)};
@@ -55,7 +53,7 @@ function Footer() {
                 <FooterLink href="/resume.pdf" target="_blank">Resume</FooterLink>
               </li>
               <li>
-                <FooterLink href={`mailto:${email}`}>{email}</FooterLink>
+                <FooterLink href={`mailto:${email}`}>Email</FooterLink>
               </li>
             </FooterLinks>
 

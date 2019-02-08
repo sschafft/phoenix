@@ -3,7 +3,7 @@ module.exports = {
   author: `Scott Schaffter`,
   email: `scott@schaffters.com`,
   byline: `I help people take ideas and turn them into things.`,
-  description: `Scott Schaffter's personal site`,
+  description: `Scott Schaffter's portfolio site`,
   siteUrl: `https://scott.schaffters.com/`,
   social: {
     twitter: `sschafft`,
