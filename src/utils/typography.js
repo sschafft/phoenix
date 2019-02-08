@@ -9,6 +9,12 @@ Kirkham.overrideThemeStyles = () => {
   }
 }
 
+Kirkham.overrideThemeStyles = ({ rhythm }, options, styles) => ({
+  h3: {
+    color: "hsla(0,0%,0%,.6)"
+  }
+})
+
 delete Kirkham.googleFonts
 
 const typography = new Typography(Kirkham)
