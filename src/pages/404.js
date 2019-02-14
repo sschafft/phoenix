@@ -17,7 +17,7 @@ class NotFoundPage extends React.Component {
         <Head title="404: Not Found" />
         <img
           src={panda}
-          alt='Sad Panda'
+          alt="Sad Panda"
           style={{
             marginRight: rhythm(2),
             marginBottom: 0,

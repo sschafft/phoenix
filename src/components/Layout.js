@@ -4,7 +4,6 @@ import Bio from './Bio'
 import Footer from './Footer'
 import { rhythm, scale } from '../utils/typography'
 
-
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
@@ -12,9 +11,7 @@ class Layout extends React.Component {
     let header
 
     if (location.pathname === rootPath) {
-      header = (
-        <Bio />
-      )
+      header = <Bio />
     } else {
       header = (
         <h5

@@ -16,23 +16,23 @@ function Bio() {
               marginBottom: rhythm(1.5),
             }}
           >
-          <Image
-            fixed={data.avatar.childImageSharp.fixed}
-            alt={author}
-            style={{
-              marginRight: rhythm(2),
-              marginBottom: 0,
-              minWidth: 150,
-              borderRadius: `100%`,
-            }}
-          />
-          <div>
-            <h1>{author}</h1>
-            <p>{byline}</p>
-            <Link style={{ boxShadow: `none` }} to="/about">
-              <h5>Learn more about me →</h5>
-            </Link>
-          </div>
+            <Image
+              fixed={data.avatar.childImageSharp.fixed}
+              alt={author}
+              style={{
+                marginRight: rhythm(2),
+                marginBottom: 0,
+                minWidth: 150,
+                borderRadius: `100%`,
+              }}
+            />
+            <div>
+              <h1>{author}</h1>
+              <p>{byline}</p>
+              <Link style={{ boxShadow: `none` }} to="/about">
+                <h5>Learn more about me →</h5>
+              </Link>
+            </div>
           </section>
         )
       }}

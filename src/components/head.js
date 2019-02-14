@@ -63,7 +63,10 @@ function Head({ description, lang, meta, keywords, title }) {
           >
             <link href="/manifest.json" rel="manifest" />
 
-            <meta content="/icons/mstile-70x70.png" name="msapplication-square70x70" />
+            <meta
+              content="/icons/mstile-70x70.png"
+              name="msapplication-square70x70"
+            />
             <meta
               content="/icons/mstile-144x144.png"
               name="msapplication-square144x144"
@@ -147,7 +150,6 @@ function Head({ description, lang, meta, keywords, title }) {
               sizes="16x16"
               type="image/png"
             />
-
           </Helmet>
         )
       }}

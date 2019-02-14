@@ -5,10 +5,10 @@ import PostList from '../components/PostList'
 import Head from '../components/Head'
 import ListItem from '../components/ListItem'
 import { rhythm, scale } from '../utils/typography'
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const SubTitle = styled.h4`
-  color: hsla(0,0%,0%,0.6);
+  color: hsla(0, 0%, 0%, 0.6);
   margin-bottom: ${rhythm(1)};
   font-size: ${rhythm(1)};
   display: flex;
@@ -17,9 +17,10 @@ const SubTitle = styled.h4`
   align-items: center;
   text-align: center;
 
-  :before,:after {
+  :before,
+  :after {
     content: '';
-    border-top: 1px solid hsla(0,0%,0%,0.2);
+    border-top: 1px solid hsla(0, 0%, 0%, 0.2);
     margin: 0 20px 0 0;
     flex: 1 0 20px;
   }
@@ -44,18 +45,17 @@ class SiteIndex extends React.Component {
 
         <SubTitle>Some recent work</SubTitle>
 
-        { projects.map(( { node }, index ) => {
-          return(
-           <ListItem
-             title={node.frontmatter.title}
-             link={node.frontmatter.link}
-             meta={node.frontmatter.meta}
-             blurb={node.frontmatter.blurb}
-             key={`project-${index}`}
-           />
+        {projects.map(({ node }, index) => {
+          return (
+            <ListItem
+              title={node.frontmatter.title}
+              link={node.frontmatter.link}
+              meta={node.frontmatter.meta}
+              blurb={node.frontmatter.blurb}
+              key={`project-${index}`}
+            />
           )
         })}
-
       </Layout>
     )
   }
@@ -71,13 +71,9 @@ export const pageQuery = graphql`
       }
     }
     projects: allMarkdownRemark(
-      filter: {
-        fields: {slug: {regex: "/projects/"}}
-      }
-      sort: {
-        fields: [frontmatter___order], order: ASC
-      }
-      ){
+      filter: { fields: { slug: { regex: "/projects/" } } }
+      sort: { fields: [frontmatter___order], order: ASC }
+    ) {
       edges {
         node {
           frontmatter {
@@ -94,13 +90,9 @@ export const pageQuery = graphql`
       }
     }
     products: allMarkdownRemark(
-      filter: {
-        fields: {slug: {regex: "/products/"}}
-      }
-      sort: {
-        fields: [frontmatter___order], order: ASC
-      }
-      ){
+      filter: { fields: { slug: { regex: "/products/" } } }
+      sort: { fields: [frontmatter___order], order: ASC }
+    ) {
       edges {
         node {
           frontmatter {

@@ -15,9 +15,7 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <Head title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
-        <p>
-          {post.frontmatter.date}
-        </p>
+        <p>{post.frontmatter.date}</p>
         <h1>{this.props.slug}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
