@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import PostList from '../components/PostList'
 import Head from '../components/Head'
 import ListItem from '../components/ListItem'
 import { rhythm, scale } from '../utils/typography'
