@@ -17,11 +17,11 @@ class About extends React.Component {
         />
          <h1>About Me</h1>
 
-         {sections.map(({ node }) => {
+         {sections.map(({ node }, index) => {
            const title = node.frontmatter.title || node.fields.slug
            const img = node.frontmatter.heroImage && node.frontmatter.heroImage.childImageSharp.fluid
            return (
-             <div key={node.id}>
+             <div key={`section-${index}`}>
                 <h3>{title}</h3>
                 {img &&
                   <Image
@@ -41,7 +41,7 @@ class About extends React.Component {
 export default About
 
 export const pageQuery = graphql`
-    query {
+  query {
     site {
       siteMetadata {
         title
