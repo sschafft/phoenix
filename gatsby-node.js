@@ -36,9 +36,13 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
       const type = post.node.fields.slug.split('/')[1]
-      const pageTypes = ['blog','projects']
 
+      // Add directories to the pageTypes array you want to have turned into actual site pages
+      // along with a template that shares the same name to the template folder
+
+      const pageTypes = ['blog']
       const componentType = path.resolve(`./src/templates/${type}.js`)
+
       if (pageTypes.includes(type)){
         createPage({
           path: post.node.fields.slug,

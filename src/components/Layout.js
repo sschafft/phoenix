@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Bio from './Bio'
-import Footer from './Footer'
+import Bio from './bio'
+import Footer from './footer'
 import { rhythm, scale } from '../utils/typography'
 
 class Layout extends React.Component {

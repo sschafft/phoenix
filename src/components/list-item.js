@@ -1,6 +1,6 @@
 import React from 'react'
 import { rhythm, scale } from '../utils/typography'
-import MetaItems from './MetaItems'
+import MetaItems from './meta-items'
 import styled from 'styled-components'
 
 const StyledLink = styled.a`

@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { rhythm, scale } from '../utils/typography'
-import Layout from '../components/Layout'
-import Head from '../components/Head'
+import Layout from '../components/layout'
+import Head from '../components/head'
 import panda from '../../content/assets/sad-panda.gif'
 
 console.log(panda)

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Head from '../components/Head'
-import ListItem from '../components/ListItem'
+import Layout from '../components/layout'
+import Head from '../components/head'
+import ListItem from '../components/list-item'
 import { rhythm, scale } from '../utils/typography'
 import styled from 'styled-components'
 
