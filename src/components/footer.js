@@ -73,7 +73,7 @@ function Footer() {
                 <FooterLink href={`mailto:${email}`}>Email</FooterLink>
               </li>
               <li>
-                <FooterLink href={`mailto:${email}`}>Source</FooterLink>
+                <FooterLink href="https://github.com/sschafft/phoenix">Source</FooterLink>
               </li>
             </FooterLinks>
 
