@@ -4,7 +4,7 @@ module.exports = {
   email: `scott@schaffters.com`,
   byline: `I help people take ideas and turn them into things.`,
   description: `Scott Schaffter's portfolio site`,
-  siteUrl: `https://scott.schaffters.com/`,
+  siteUrl: `https://scottschaffter.com/`,
   social: {
     twitter: `sschafft`,
     github: `sschafft`,
