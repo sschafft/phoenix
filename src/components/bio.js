@@ -19,7 +19,15 @@ function Bio() {
             <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
+              critical={true}
+              fadeIn={false}
               style={{
+                marginRight: rhythm(2),
+                marginBottom: 0,
+                minWidth: 150,
+                borderRadius: `100%`,
+              }}
+              imgStyle={{
                 marginRight: rhythm(2),
                 marginBottom: 0,
                 minWidth: 150,
