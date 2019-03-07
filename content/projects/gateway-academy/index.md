@@ -1,7 +1,7 @@
 ---
 title: Gateway Academy
 link: "https://gateway.academy"
-order: 3
+order: 4
 blurb: >
   Lead product management for a digital learning platform focused on financial inclusion
 meta:
