@@ -1,9 +1,9 @@
 ---
 title: Gateway Academy
 link: "https://gateway.academy"
-order: 4
+order: 5
 blurb: >
-  Lead product management for a digital learning platform focused on financial inclusion
+  Led product strategy for an eLearning platform focused on financial inclusion
 meta:
   - label: "Client"
     data: "CGAP / World Bank Group"
