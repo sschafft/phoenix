@@ -12,6 +12,8 @@ Hosted by Netlify:
 
 
 # Dev Notes
+Upgrade all yarn dependencies: `yarn upgrade --latest` 
+
 Install with yarn: `yarn install` 
 
-Serve gatsby locally: `gatsby develop`
+Serve gatsby locally: `yarn dev`

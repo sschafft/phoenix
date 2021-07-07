@@ -1,7 +1,7 @@
 ---
-title: Google (consulting)
+title: Google
 link: "https://www.google.com"
 order: 1
 blurb: >
-  Consulting with the Next Practice Innovation team at Google to explore the future of workplace learning.
+  Lead custom development strategy for the PeopleDev Tech team to build the future of workplace learning.
 ---
